@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Calculations" %>
+
+<h1>Calculations</h1>
+
+<div id="calculations">
+  <% @calculations.each do |calculation| %>
+    <%= render calculation %>
+    <p>
+      <%= link_to "Show this calculation", calculation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New calculation", new_calculation_path %>
